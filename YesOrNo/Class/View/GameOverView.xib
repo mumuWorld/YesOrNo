@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GameOverView" customModule="YesOrNo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZH5-x4-N5J">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZH5-x4-N5J" secondAttribute="height" multiplier="374:93" id="tvn-Uw-28c"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEJ-8N-e48">
+                    <rect key="frame" x="169" y="113.5" width="37.5" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34W-Zk-KoI">
+                    <rect key="frame" x="40" y="270.5" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="否">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="subBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XLX-lR-rso"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不要灰心,少侠请从头来过😄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySc-Qm-nhz">
+                    <rect key="frame" x="78" y="199.5" width="219" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aib-mS-PHN">
+                    <rect key="frame" x="235" y="270.5" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="7uw-Cl-6QO"/>
+                        <constraint firstAttribute="height" constant="100" id="C1G-aq-NSP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <state key="normal" title="是">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="subBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="fIm-1s-ZpR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="34W-Zk-KoI" firstAttribute="width" secondItem="Aib-mS-PHN" secondAttribute="width" id="0jc-Pr-zCh"/>
+                <constraint firstItem="xEJ-8N-e48" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2tG-mu-Uaj"/>
+                <constraint firstAttribute="trailing" secondItem="ZH5-x4-N5J" secondAttribute="trailing" id="6R3-3L-jge"/>
+                <constraint firstItem="ySc-Qm-nhz" firstAttribute="top" secondItem="xEJ-8N-e48" secondAttribute="bottom" constant="50" id="CI4-rx-NCO"/>
+                <constraint firstItem="xEJ-8N-e48" firstAttribute="top" secondItem="ZH5-x4-N5J" secondAttribute="bottom" constant="20" id="I8E-hT-h4D"/>
+                <constraint firstItem="ySc-Qm-nhz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mgx-Oa-qcc"/>
+                <constraint firstItem="34W-Zk-KoI" firstAttribute="height" secondItem="Aib-mS-PHN" secondAttribute="height" id="WyS-kf-eLH"/>
+                <constraint firstItem="Aib-mS-PHN" firstAttribute="top" secondItem="ySc-Qm-nhz" secondAttribute="bottom" constant="50" id="Yw6-Vm-QbO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Aib-mS-PHN" secondAttribute="trailing" constant="40" id="gJD-Et-1OZ"/>
+                <constraint firstItem="ZH5-x4-N5J" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jqE-gn-xOM"/>
+                <constraint firstItem="34W-Zk-KoI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="qUC-qt-Ijs"/>
+                <constraint firstItem="ZH5-x4-N5J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rXC-0W-YtP"/>
+                <constraint firstItem="34W-Zk-KoI" firstAttribute="top" secondItem="Aib-mS-PHN" secondAttribute="top" id="vjg-gZ-7vH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="confirmBtnClick" destination="Aib-mS-PHN" id="h8n-f0-K9U"/>
+                <outlet property="scoreImage" destination="ZH5-x4-N5J" id="gLA-Bb-Bm4"/>
+                <outlet property="scoreLabel" destination="xEJ-8N-e48" id="tc0-2U-eTj"/>
+            </connections>
+            <point key="canvasLocation" x="130.40000000000001" y="178.56071964017991"/>
+        </view>
+    </objects>
+</document>
