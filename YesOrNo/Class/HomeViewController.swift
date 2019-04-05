@@ -39,12 +39,15 @@ class HomeViewController: UIViewController {
 
 
         self.overView.handleBlock = {[weak self] (confirm:Bool)->() in
+            guard let strongSelf = self else { return }
+            strongSelf.scoreLabel.text = "0"
+            
             if confirm {
-                self?.handleManagerParm()
+                strongSelf.handleManagerParm()
             } else {
-                self?.negativeBtn.isHidden = true
-                self?.confirmBtn.isHidden = true
-                self?.startGameBtn.isHidden = false
+                strongSelf.negativeBtn.isHidden = true
+                strongSelf.confirmBtn.isHidden = true
+                strongSelf.startGameBtn.isHidden = false
             }
         }
         let isneed = Tools.isNeedShowHelp()
